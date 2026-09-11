@@ -1,0 +1,55 @@
+{
+  "run_tag": "run-001",
+  "config": {
+    "seed": 20260801,
+    "solver_model": "gpt-5",
+    "critic_model": "meta-llama/Llama-3.3-70B-Instruct-Turbo",
+    "embed_model": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+    "labels": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ],
+    "frame_slots": [
+      "addressee",
+      "modality",
+      "action",
+      "scope",
+      "condition",
+      "exception",
+      "temporal",
+      "consequence"
+    ],
+    "match_strategies": [
+      "direct_textual",
+      "conceptual",
+      "distributed",
+      "absent"
+    ],
+    "retrieval_topk": 12,
+    "sufficiency_rounds": 3,
+    "sufficiency_delta": 0.15,
+    "max_critic_retries": 2,
+    "stability_runs": 5,
+    "stability_temp": 0.7,
+    "negctrl_rate": 0.15,
+    "concurrency": 6,
+    "batch_flush": 10,
+    "jurisdictions": [
+      "KSA",
+      "BHR",
+      "UAE",
+      "QAT",
+      "OMN",
+      "KWT",
+      "DIFC",
+      "ADGM"
+    ],
+    "config_hash": "637bcfe779c144c5"
+  },
+  "started": "2026-08-04 15:26:14",
+  "python": "3.12.13",
+  "device": "cuda"
+}
