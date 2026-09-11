@@ -1,0 +1,335 @@
+{
+  "mutation_recovery": {
+    "n": 140,
+    "accuracy": 0.37142857142857144,
+    "ci95": [
+      0.29285714285714287,
+      0.45
+    ],
+    "per_label": [
+      {
+        "label": "C1",
+        "support": 24,
+        "precision": 0.3333333333333333,
+        "recall": 0.6666666666666666,
+        "F1": 0.4444444444444444,
+        "F2": 0.5555555555555555
+      },
+      {
+        "label": "C2",
+        "support": 24,
+        "precision": 0.18604651162790697,
+        "recall": 0.3333333333333333,
+        "F1": 0.23880597014925373,
+        "F2": 0.2877697841726619
+      },
+      {
+        "label": "C3",
+        "support": 24,
+        "precision": 0.5714285714285714,
+        "recall": 0.5,
+        "F1": 0.5333333333333333,
+        "F2": 0.5128205128205128
+      },
+      {
+        "label": "C4",
+        "support": 49,
+        "precision": 0.5769230769230769,
+        "recall": 0.30612244897959184,
+        "F1": 0.4,
+        "F2": 0.3378378378378378
+      },
+      {
+        "label": "C5",
+        "support": 19,
+        "precision": 0.5,
+        "recall": 0.05263157894736842,
+        "F1": 0.09523809523809523,
+        "F2": 0.0641025641025641
+      }
+    ],
+    "by_mtype": {
+      "broaden": 0.2,
+      "delete": 0.053,
+      "modal_down": 0.5,
+      "narrow": 0.417,
+      "paraphrase": 0.667,
+      "slot_drop": 0.333
+    }
+  },
+  "safety": {
+    "hallucinated_coverage": 0.27692307692307694,
+    "hallucinated_ci95": [
+      0.2153846153846154,
+      0.3384615384615385
+    ],
+    "n_negctrl": 195,
+    "false_C5_rate": 0.008264462809917356,
+    "false_C5_ci95": [
+      0.0,
+      0.024793388429752067
+    ],
+    "n_present": 121
+  },
+  "reliability": {
+    "alpha_intra_run": 0.5795858126103652,
+    "alpha_ci95": [
+      0.5173876156598852,
+      0.6396267924953231
+    ],
+    "k_runs": 5,
+    "label_prevalence": {
+      "C2": 0.46296296296296297,
+      "C4": 0.234006734006734,
+      "C5": 0.1632996632996633,
+      "C3": 0.07744107744107744,
+      "C1": 0.06228956228956229
+    },
+    "max_prevalence": 0.46296296296296297,
+    "raw_agreement": 0.8333333333333334
+  },
+  "metamorphic": [
+    {
+      "relation": "mask_jurisdiction",
+      "kind": "invariant",
+      "n": 22,
+      "pass_rate": 0.7272727272727273,
+      "ci_lo": 0.5454545454545454,
+      "ci_hi": 0.9090909090909091,
+      "p_vs_chance": 0.026239395141601562,
+      "p_holm": 0.052478790283203125
+    },
+    {
+      "relation": "order_permute",
+      "kind": "invariant",
+      "n": 22,
+      "pass_rate": 0.5909090909090909,
+      "ci_lo": 0.4090909090909091,
+      "ci_hi": 0.8181818181818182,
+      "p_vs_chance": 0.2617335319519043,
+      "p_holm": 0.2617335319519043
+    },
+    {
+      "relation": "renumber",
+      "kind": "invariant",
+      "n": 22,
+      "pass_rate": 0.7727272727272727,
+      "ci_lo": 0.5909090909090909,
+      "ci_hi": 0.9090909090909091,
+      "p_vs_chance": 0.00845026969909668,
+      "p_holm": 0.02535080909729004
+    }
+  ],
+  "grounding": {
+    "n": 807,
+    "span_verified": 0.052,
+    "citation_article_valid": 0.53,
+    "deontic_supported": 0.706,
+    "mean_slot_completeness": 1.0,
+    "c5_with_exclusion_list": 0.812
+  },
+  "oracle_ordinal": [
+    {
+      "mutation": "modal_down",
+      "n": 24,
+      "base_rank": 4.0,
+      "new_rank": 2.46,
+      "strict_decrease": 0.833,
+      "ci_lo": 0.667,
+      "ci_hi": 0.958
+    },
+    {
+      "mutation": "slot_drop",
+      "n": 24,
+      "base_rank": 4.0,
+      "new_rank": 3.33,
+      "strict_decrease": 0.5,
+      "ci_lo": 0.292,
+      "ci_hi": 0.708
+    },
+    {
+      "mutation": "narrow",
+      "n": 24,
+      "base_rank": 4.0,
+      "new_rank": 2.62,
+      "strict_decrease": 0.833,
+      "ci_lo": 0.667,
+      "ci_hi": 0.958
+    },
+    {
+      "mutation": "delete",
+      "n": 19,
+      "base_rank": 4.0,
+      "new_rank": 2.53,
+      "strict_decrease": 1.0,
+      "ci_lo": 1.0,
+      "ci_hi": 1.0
+    }
+  ],
+  "consistency": {
+    "cross_jurisdiction_contradictions": 5,
+    "cross_jurisdiction_rate": 0.0049,
+    "inter_slot_incoherent_C1": 0,
+    "inter_slot_rate": 0.0
+  },
+  "baseline": {
+    "adjusted_rand": 0.01153588118990733,
+    "mutual_information": 0.033188860178164664,
+    "raw_agreement": 0.20565302144249512,
+    "baseline_mutation_accuracy": 0.15172413793103448,
+    "system_mutation_accuracy": 0.37142857142857144,
+    "margin_pp": 22.0
+  },
+  "ablation": {
+    "summary": [
+      {
+        "ablation": "full",
+        "n": 58,
+        "mutation_recall": 0.3620689655172414,
+        "recall_lo": 0.2413793103448276,
+        "recall_hi": 0.4827586206896552,
+        "false_C5": 0.02127659574468085
+      },
+      {
+        "ablation": "no_sufficiency",
+        "n": 58,
+        "mutation_recall": 0.3620689655172414,
+        "recall_lo": 0.2413793103448276,
+        "recall_hi": 0.5,
+        "false_C5": 0.0
+      },
+      {
+        "ablation": "no_strategy",
+        "n": 58,
+        "mutation_recall": 0.3448275862068966,
+        "recall_lo": 0.22413793103448276,
+        "recall_hi": 0.46551724137931033,
+        "false_C5": 0.0
+      },
+      {
+        "ablation": "no_critic",
+        "n": 58,
+        "mutation_recall": 0.39655172413793105,
+        "recall_lo": 0.27586206896551724,
+        "recall_hi": 0.5344827586206896,
+        "false_C5": 0.02127659574468085
+      },
+      {
+        "ablation": "single_agent",
+        "n": 58,
+        "mutation_recall": 0.3793103448275862,
+        "recall_lo": 0.25862068965517243,
+        "recall_hi": 0.5172413793103449,
+        "false_C5": 0.0
+      }
+    ],
+    "mcnemar": [],
+    "permutation": [
+      {
+        "comparison": "no_sufficiency - full",
+        "delta_false_C5": -0.02127659574468085,
+        "p_perm": 1.0
+      },
+      {
+        "comparison": "no_strategy - full",
+        "delta_false_C5": -0.02127659574468085,
+        "p_perm": 1.0
+      },
+      {
+        "comparison": "no_critic - full",
+        "delta_false_C5": 0.0,
+        "p_perm": 1.0
+      },
+      {
+        "comparison": "single_agent - full",
+        "delta_false_C5": -0.02127659574468085,
+        "p_perm": 1.0
+      }
+    ]
+  },
+  "metacognition": {
+    "sufficiency_curve": [
+      {
+        "round": 1,
+        "mean_new": 9.503597122302159,
+        "mean_total": 9.503597122302159,
+        "n": 139
+      },
+      {
+        "round": 2,
+        "mean_new": 8.417910447761194,
+        "mean_total": 18.276119402985074,
+        "n": 134
+      },
+      {
+        "round": 3,
+        "mean_new": 2.8449612403100777,
+        "mean_total": 21.410852713178294,
+        "n": 129
+      }
+    ],
+    "trigger_precision": 0.373015873015873,
+    "trigger_recall": 0.8392857142857143,
+    "n_triggered": 126,
+    "AUARC": 0.44244594288008343,
+    "type2_AUROC": 0.6622596153846153,
+    "overthinking_rate": 0.626984126984127,
+    "coverage_at_accuracy": {
+      "0.85": 0.0,
+      "0.9": 0.0,
+      "0.95": 0.0
+    },
+    "cost_main": [
+      {
+        "ablation": "full",
+        "mean_calls": 5.438848920863309,
+        "mean_latency": 435.56841726618705
+      }
+    ],
+    "cost_by_ablation": [
+      {
+        "ablation_name": "full",
+        "mean_calls": 6.672413793103448,
+        "mean_latency": 402.8725862068966
+      },
+      {
+        "ablation_name": "no_critic",
+        "mean_calls": 2.9310344827586206,
+        "mean_latency": 234.2546551724138
+      },
+      {
+        "ablation_name": "no_strategy",
+        "mean_calls": 6.672413793103448,
+        "mean_latency": 444.1444827586207
+      },
+      {
+        "ablation_name": "no_sufficiency",
+        "mean_calls": 4.5344827586206895,
+        "mean_latency": 331.58655172413796
+      },
+      {
+        "ablation_name": "single_agent",
+        "mean_calls": 1.0,
+        "mean_latency": 111.8401724137931
+      }
+    ]
+  },
+  "run": {
+    "run_tag": "run-001",
+    "config_hash": "637bcfe779c144c5",
+    "seed": 20260801,
+    "finished": "2026-08-04 22:44:33",
+    "n_requirement_units": 171,
+    "n_jurisdictions": 6,
+    "n_main_records": 1026,
+    "n_stability_records": 594,
+    "n_mutations": 148,
+    "n_negative_controls": 195,
+    "n_mr": 66,
+    "n_ablation": 770,
+    "total_llm_calls": 14646,
+    "guard_checks": 727,
+    "guard_fingerprints": 162,
+    "leakage_violations": 0
+  }
+}
