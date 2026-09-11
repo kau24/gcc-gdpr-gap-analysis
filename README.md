@@ -1,4 +1,4 @@
-# Metacognitive Multi-Agent Reasoning for Legal Gap Analysis
+# Multi-Agent Reasoning for Legal Gap Analysis
 
 Provision-level comparison of six GCC personal data protection statutes against the
 GDPR, performed by a metacognitively regulated multi-agent system and evaluated
