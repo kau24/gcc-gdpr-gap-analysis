@@ -7,7 +7,7 @@ without expert annotation.
 This repository contains the code, corpus, instrument, complete execution records and
 figures for the paper. Every reported figure can be recomputed from the artefacts here.
 
----
+## Researchers: 
 
 ## What the system does
 
